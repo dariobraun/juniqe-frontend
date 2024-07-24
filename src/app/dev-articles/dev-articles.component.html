@@ -7,6 +7,10 @@
   </header>
 
   <main>
-    <div class="main-content">Cards</div>
+    <div class="main-content">
+      <div *ngIf="cards$ | async as cards">
+        <app-card *ngFor="let card of cards">{{ card.title }}</app-card>
+      </div>
+    </div>
   </main>
 </div>

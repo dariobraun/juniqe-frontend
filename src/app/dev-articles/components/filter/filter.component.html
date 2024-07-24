@@ -1,0 +1,24 @@
+<div class="filter">
+  <div class="filter-input">
+    <img
+      [ngSrc]="'assets/search-icon.svg'"
+      [height]="50"
+      [width]="50"
+      alt="search icon"
+    />
+    <input
+      type="text"
+      [formControl]="filter"
+      placeholder="Filter by title, author..."
+    />
+  </div>
+  <select [formControl]="sort">
+    <option value="">All Results</option>
+    <option value="date">Date</option>
+    <option value="author">Author</option>
+  </select>
+  <div class="checkbox">
+    <input id="latest" type="checkbox" [formControl]="latestOnly" />
+    <label for="latest">Latest only</label>
+  </div>
+</div>

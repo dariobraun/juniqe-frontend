@@ -16,7 +16,6 @@ export class AvatarComponent {
   }
 
   get name() {
-    console.log('NAME', this._name);
     return this._name;
   }
 

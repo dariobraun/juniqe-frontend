@@ -14,24 +14,27 @@
 
     .header-content {
       padding: 0 4rem 0 4rem;
-      .filter {
+
+      app-filter {
+        display: block;
         position: absolute;
-        bottom: -10px;
+        bottom: -40px;
         width: 90%;
-        background-color: #ffffff;
       }
     }
   }
 
   .main-content {
     height: 100%;
+    min-height: 100vh;
     background-color: var(--background);
     padding: 6rem 4rem 0 4rem;
 
     .card-layout {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 4rem 2rem
+      gap: 4rem 2rem;
+      justify-content: center;
     }
   }
 }

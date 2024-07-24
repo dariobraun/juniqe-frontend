@@ -1,0 +1,44 @@
+.filter {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-accents);
+  font-size: 16pt;
+
+  .filter-input {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    img {
+      transform: scale(0.8);
+    }
+
+    input {
+      height: 50px;
+      border: none;
+      font-size: 16pt;
+    }
+  }
+
+  select {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16pt;
+    color: var(--text-accents);
+  }
+
+  .checkbox {
+    display: flex;
+    gap: 0.5rem;
+
+    input:checked+label::before {
+      box-shadow: inset 0px 0px 0px 3px #fff;
+      background-color: #8cad2d;
+    }
+  }
+}

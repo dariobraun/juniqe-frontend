@@ -13,6 +13,55 @@
     height: 100%;
     background-color: #ffffff;
     border-radius: 0 0 10px 10px;
-    padding: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .author {
+      display: flex;
+      align-items: center;
+
+      app-avatar {
+        display: block;
+        margin-right: 0.5rem;
+      }
+
+      .date-added {
+        font-size: 0.8rem;
+        color: var(--text-accents);
+      }
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .likes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        background-color: #ffffff;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        padding: 0.25rem 1rem;
+        border-radius: 5px;
+        font-size: 16pt;
+      }
+
+      .number-of-likes {
+        display: flex;
+        align-items: center;
+        color: var(--text-accents);
+        gap: 0.5rem;
+
+        img {
+          transform: scale(0.75);
+        }
+      }
+    }
   }
 }

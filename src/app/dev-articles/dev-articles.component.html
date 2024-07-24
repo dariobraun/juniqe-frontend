@@ -8,8 +8,10 @@
 
   <main>
     <div class="main-content">
-      <div *ngIf="cards$ | async as cards">
-        <app-card *ngFor="let card of cards">{{ card.title }}</app-card>
+      <div *ngIf="articles$ | async as articles" class="card-layout">
+        <app-card *ngFor="let article of articles" [article]="article"
+          >{{ article.title }}
+        </app-card>
       </div>
     </div>
   </main>

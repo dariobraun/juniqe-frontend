@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { CardService } from './services/card.service';
+import { ArticleService } from './services/article.service';
 import { CommonModule } from '@angular/common';
 import { map } from 'rxjs';
 import {CardComponent} from "./components/card/card.component";
@@ -12,9 +12,9 @@ import {CardComponent} from "./components/card/card.component";
   styleUrl: './dev-articles.component.css',
 })
 export class DevArticlesComponent {
-  cardService = inject(CardService);
+  articleService = inject(ArticleService);
 
-  cards$ = this.cardService
-    .getCards()
+  articles$ = this.articleService
+    .getArticles()
     .pipe(map((response) => response.payload.data));
 }

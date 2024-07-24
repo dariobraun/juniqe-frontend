@@ -6,6 +6,6 @@ export type Article = {
   images: {
     portrait: string[];
     landscape: string[];
-  };
+  }[];
   likes: number;
 };

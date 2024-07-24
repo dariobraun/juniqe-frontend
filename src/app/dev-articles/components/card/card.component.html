@@ -1,1 +1,14 @@
-<p>card works!</p>
+<div class="card" *ngIf="article">
+  <img
+    *ngIf="article.images[0].landscape[0]"
+    [ngSrc]="article.images[0].landscape[0] ?? ''"
+    [width]="300"
+    [height]="120"
+    alt="article header picture"
+  />
+  <div class="content">
+    <div class="author">{{ article.author }}</div>
+    <div class="title">{{ article.title }}</div>
+    <div class="likes">{{ article.likes }}</div>
+  </div>
+</div>

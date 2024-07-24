@@ -6,10 +6,10 @@ import { Response } from '../model/response';
 @Injectable({
   providedIn: 'root',
 })
-export class CardService {
+export class ArticleService {
   private http = inject(HttpClient);
 
-  getCards() {
+  getArticles() {
     return this.http.get<Response>(API_URL);
   }
 }

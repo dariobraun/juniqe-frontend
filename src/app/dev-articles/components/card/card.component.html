@@ -16,10 +16,10 @@
     </div>
     <div class="title">{{ article.title }}</div>
     <div class="likes">
-      <button>LIKE</button>
+      <button (click)="toggleLike()" [class]="{'liked': liked}" type="button">LIKE</button>
       <div class="number-of-likes">
         <img [ngSrc]="'assets/heart-icon.svg'" [height]="30" [width]="30" alt="heart icon" />
-        {{ article.likes }} likes
+        {{ liked ? article.likes + 1 : article.likes }} likes
       </div>
     </div>
   </div>

@@ -50,6 +50,12 @@
         padding: 0.25rem 1rem;
         border-radius: 5px;
         font-size: 16pt;
+        cursor: pointer;
+      }
+
+      button:hover, button.liked {
+        background-color: var(--primary);
+        color: #ffffff
       }
 
       .number-of-likes {

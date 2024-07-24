@@ -42,7 +42,7 @@ export class DevArticlesComponent {
               new Date().getFullYear(),
           )
         : filteredArticles;
-      const sortedArticles = latestOnlyArticles.sort((a, b) => {
+      return latestOnlyArticles.sort((a, b) => {
         if (!sort) {
           return 0;
         }
@@ -57,7 +57,6 @@ export class DevArticlesComponent {
 
         return 0;
       });
-      return sortedArticles;
     }),
   );
 

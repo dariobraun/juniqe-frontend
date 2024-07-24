@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Article } from '../../model/article';
-import {DatePipe, NgIf, NgOptimizedImage} from "@angular/common";
-import {AvatarComponent} from "./components/avatar/avatar.component";
+import { DatePipe, NgIf, NgOptimizedImage } from '@angular/common';
+import { AvatarComponent } from './components/avatar/avatar.component';
 
 @Component({
   selector: 'app-card',
@@ -12,4 +12,10 @@ import {AvatarComponent} from "./components/avatar/avatar.component";
 })
 export class CardComponent {
   @Input() article?: Article;
+
+  liked = false;
+
+  toggleLike() {
+    this.liked = !this.liked;
+  }
 }

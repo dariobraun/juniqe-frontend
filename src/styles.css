@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body,html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #00a4e0;
+  --primary-variant: #0d81b3;
+  --background: #eee;
+  --text-default: #272727;
+  --text-accents: #888888;
+}

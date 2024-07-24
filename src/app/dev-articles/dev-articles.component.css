@@ -1,0 +1,31 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /*background: linear-gradient(to bottom, var(--primary-variant) 20%, var(--background) 20%);*/
+
+  header {
+    height: 20vh;
+    background-color: var(--primary-variant);
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .header-content {
+      padding: 0 4rem 0 4rem;
+      .filter {
+        position: absolute;
+        bottom: -10px;
+        width: 90%;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .main-content {
+    height: 80vh;
+    background-color: var(--background);
+    padding: 6rem 4rem 0 4rem;
+  }
+}

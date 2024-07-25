@@ -1,40 +1,32 @@
 .container {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  /*background: linear-gradient(to bottom, var(--primary-variant) 20%, var(--background) 20%);*/
+  background: linear-gradient(
+    to bottom,
+    var(--primary-variant) 200px,
+    var(--background) 200px
+  );
 
-  header {
-    height: 20vh;
-    background-color: var(--primary-variant);
-    color: white;
-    display: flex;
-    align-items: center;
-    position: relative;
+  .width-wrapper {
+    max-width: 920px;
+    min-width: 320px;
+    margin: 0 auto;
 
-    .header-content {
-      padding: 0 4rem 0 4rem;
-
-      app-filter {
-        display: block;
-        position: absolute;
-        bottom: -40px;
-        width: 90%;
-      }
+    header {
+      color: white;
+      width: 100%;
+      padding: 80px 2rem 0 2rem;
     }
-  }
 
-  .main-content {
-    height: 100%;
-    min-height: 100vh;
-    background-color: var(--background);
-    padding: 6rem 4rem 0 4rem;
+    main {
+      height: 100%;
+      min-height: 100vh;
+      padding: 6rem 4rem 0 4rem;
 
-    .card-layout {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 4rem 2rem;
-      justify-content: center;
+      .card-layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 4rem 2rem;
+        justify-content: center;
+      }
     }
   }
 }

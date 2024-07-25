@@ -1,18 +1,22 @@
 <div class="container">
-  <header>
-    <div class="header-content">
-      <h1>dev articles</h1>
-      <app-filter (filterChanged)="filterArticles($event)" (sortChanged)="sortArticles($event)" (latestOnlyChanged)="filterLatest($event)"/>
-    </div>
-  </header>
+  <div class="width-wrapper">
+    <header>
+        <h1>dev articles</h1>
+        <app-filter
+          (filterChanged)="filterArticles($event)"
+          (sortChanged)="sortArticles($event)"
+          (latestOnlyChanged)="filterLatest($event)"
+        />
+    </header>
 
-  <main>
-    <div class="main-content">
-      <div *ngIf="articles$ | async as articles" class="card-layout">
-        <app-card *ngFor="let article of articles" [article]="article"
-          >{{ article.title }}
-        </app-card>
+    <main>
+      <div class="main-content">
+        <div *ngIf="articles$ | async as articles" class="card-layout">
+          <app-card *ngFor="let article of articles" [article]="article"
+            >{{ article.title }}
+          </app-card>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </div>

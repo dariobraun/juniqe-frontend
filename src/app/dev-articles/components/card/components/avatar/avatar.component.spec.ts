@@ -8,16 +8,17 @@ describe('AvatarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AvatarComponent]
-    })
-    .compileComponents();
-    
+      imports: [AvatarComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(AvatarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should get correct initials from name', () => {
+    component.name = 'Test Name';
+    fixture.detectChanges();
+    expect(component.name).toEqual('TN')
   });
 });

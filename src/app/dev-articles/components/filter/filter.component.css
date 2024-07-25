@@ -6,7 +6,12 @@
   justify-content: space-between;
   align-items: center;
   color: var(--text-accents);
-  font-size: 16pt;
+
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 
   .filter-input {
     display: flex;
@@ -21,6 +26,11 @@
       height: 50px;
       border: none;
       font-size: 16pt;
+      width: 100%;
+
+      @media only screen and (max-width: 640px) {
+        font-size: 14pt;
+      }
     }
   }
 
@@ -30,6 +40,10 @@
     cursor: pointer;
     font-size: 16pt;
     color: var(--text-accents);
+
+    @media only screen and (max-width: 640px) {
+      font-size: 14pt;
+    }
   }
 
   .checkbox {

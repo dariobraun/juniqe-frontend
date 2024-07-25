@@ -1,9 +1,7 @@
 <div class="card" *ngIf="article">
   <img
     *ngIf="article.images[0].landscape[0]"
-    [ngSrc]="article.images[0].landscape[0] ?? ''"
-    [width]="300"
-    [height]="120"
+    [src]="article.images[0].landscape[0] ?? ''"
     alt="article header picture"
   />
   <div class="content">

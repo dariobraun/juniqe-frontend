@@ -19,13 +19,19 @@
     main {
       height: 100%;
       min-height: 100vh;
-      padding: 6rem 4rem 0 4rem;
+      padding: 6rem 2em 0 4rem;
 
       .card-layout {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 4rem 2rem;
         justify-content: center;
+        padding-bottom: 2rem;
+
+        app-card {
+          display: block;
+          margin: 0 auto;
+        }
       }
     }
   }
